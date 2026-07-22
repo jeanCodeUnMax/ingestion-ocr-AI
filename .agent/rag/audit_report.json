@@ -1,0 +1,339 @@
+{
+  "date": "2026-04-03T04:40:57.428735",
+  "structure": {
+    "__init__.py": {
+      "status": "OK",
+      "size": 1231,
+      "desc": "Module principal"
+    },
+    "config.json": {
+      "status": "OK",
+      "size": 2000,
+      "desc": "Configuration"
+    },
+    "chunker.py": {
+      "status": "OK",
+      "size": 22046,
+      "desc": "Découpage documents"
+    },
+    "tagger.py": {
+      "status": "OK",
+      "size": 18095,
+      "desc": "Tagging automatique"
+    },
+    "router.py": {
+      "status": "OK",
+      "size": 13333,
+      "desc": "Routage dual"
+    },
+    "embedder.py": {
+      "status": "OK",
+      "size": 13629,
+      "desc": "Embeddings vectoriels"
+    },
+    "fusion.py": {
+      "status": "OK",
+      "size": 12333,
+      "desc": "Fusion résultats"
+    },
+    "pipeline.py": {
+      "status": "OK",
+      "size": 18693,
+      "desc": "Pipeline principal"
+    },
+    "utils": {
+      "status": "OK",
+      "files": 5,
+      "desc": "Utilitaires"
+    },
+    "tests": {
+      "status": "OK",
+      "files": 4,
+      "desc": "Tests unitaires"
+    }
+  },
+  "syntax": {
+    "audit_rag.py": {
+      "status": "OK",
+      "classes": 0,
+      "functions": 0,
+      "lines": 319
+    },
+    "chunker.py": {
+      "status": "OK",
+      "classes": 3,
+      "functions": 16,
+      "lines": 643
+    },
+    "embedder.py": {
+      "status": "OK",
+      "classes": 3,
+      "functions": 4,
+      "lines": 454
+    },
+    "fusion.py": {
+      "status": "OK",
+      "classes": 2,
+      "functions": 13,
+      "lines": 396
+    },
+    "pipeline.py": {
+      "status": "OK",
+      "classes": 1,
+      "functions": 5,
+      "lines": 588
+    },
+    "router.py": {
+      "status": "OK",
+      "classes": 3,
+      "functions": 11,
+      "lines": 403
+    },
+    "tagger.py": {
+      "status": "OK",
+      "classes": 3,
+      "functions": 13,
+      "lines": 586
+    },
+    "__init__.py": {
+      "status": "OK",
+      "classes": 0,
+      "functions": 0,
+      "lines": 47
+    },
+    "tests\\test_chunker.py": {
+      "status": "OK",
+      "classes": 3,
+      "functions": 14,
+      "lines": 202
+    },
+    "tests\\test_integration.py": {
+      "status": "OK",
+      "classes": 2,
+      "functions": 11,
+      "lines": 226
+    },
+    "tests\\test_tagger.py": {
+      "status": "OK",
+      "classes": 3,
+      "functions": 18,
+      "lines": 251
+    },
+    "tests\\__init__.py": {
+      "status": "OK",
+      "classes": 0,
+      "functions": 0,
+      "lines": 6
+    },
+    "utils\\env_loader.py": {
+      "status": "OK",
+      "classes": 0,
+      "functions": 7,
+      "lines": 238
+    },
+    "utils\\scoring.py": {
+      "status": "OK",
+      "classes": 1,
+      "functions": 7,
+      "lines": 188
+    },
+    "utils\\tag_helpers.py": {
+      "status": "OK",
+      "classes": 1,
+      "functions": 6,
+      "lines": 154
+    },
+    "utils\\text_processing.py": {
+      "status": "OK",
+      "classes": 0,
+      "functions": 7,
+      "lines": 147
+    },
+    "utils\\__init__.py": {
+      "status": "OK",
+      "classes": 0,
+      "functions": 0,
+      "lines": 56
+    }
+  },
+  "imports": {},
+  "classes": {
+    "chunker.py:ChunkType": {
+      "methods": [],
+      "docstring": "Types de chunks supportés\n\nChaque type a une taille caractéristique adaptée à un usage spécifique."
+    },
+    "chunker.py:Chunk": {
+      "methods": [
+        "to_dict",
+        "from_dict",
+        "token_count",
+        "is_valid_size",
+        "get_context"
+      ],
+      "docstring": "Représente un chunk de document\n\nUn chunk est une unité sémantique cohérente extraite d'un document,..."
+    },
+    "chunker.py:Chunker": {
+      "methods": [
+        "__init__",
+        "chunk_document",
+        "_analyze_structure",
+        "_analyze_text_structure",
+        "_analyze_code_structure",
+        "_analyze_markdown_structure",
+        "_analyze_json_structure",
+        "_identify_semantic_units",
+        "_split_by_size",
+        "_classify_chunk_type",
+        "_add_overlap"
+      ],
+      "docstring": "Logique de découpage intelligent de documents\n\nLe Chunker analyse la structure des documents et les ..."
+    },
+    "tagger.py:TagCategory": {
+      "methods": [],
+      "docstring": "Catégories de tags\n\nChaque catégorie correspond à un type d'indexation différent:\n- CATEGORIQUE: Ind..."
+    },
+    "tagger.py:Tag": {
+      "methods": [
+        "to_dict",
+        "from_dict",
+        "__hash__",
+        "__eq__"
+      ],
+      "docstring": "Représente un tag attribué à un chunk\n\nAttributes:\n    category: Catégorie du tag\n    key: Clé du ta..."
+    },
+    "tagger.py:Tagger": {
+      "methods": [
+        "__init__",
+        "tag_chunk",
+        "_detect_categorique",
+        "_detect_semantique",
+        "_detect_contextuel",
+        "get_tag_value",
+        "has_tag",
+        "filter_tags_by_category",
+        "tags_to_dict"
+      ],
+      "docstring": "Logique de tagging automatique\n\nLe Tagger analyse le contenu des chunks et leur attribue des tags\nda..."
+    },
+    "router.py:StoreTarget": {
+      "methods": [],
+      "docstring": "Cibles de stockage vectoriel\n\nDétermine dans quel(s) store(s) un chunk sera indexé."
+    },
+    "router.py:RoutingDecision": {
+      "methods": [
+        "to_dict",
+        "from_dict",
+        "should_index_qdrant",
+        "should_index_zvec"
+      ],
+      "docstring": "Décision de routage pour un chunk\n\nAttributes:\n    chunk_id: ID du chunk\n    target: Cible(s) de sto..."
+    },
+    "router.py:Router": {
+      "methods": [
+        "__init__",
+        "route",
+        "_determine_target",
+        "_select_qdrant_collections",
+        "_select_zvec_collections",
+        "_build_reason",
+        "get_routing_stats"
+      ],
+      "docstring": "Logique de routage des chunks\n\nLe Router analyse les tags d'un chunk et détermine le meilleur\nroutag..."
+    },
+    "embedder.py:QdrantEmbedder": {
+      "methods": [
+        "__init__"
+      ],
+      "docstring": "Gestion des embeddings Qdrant (1536 dimensions via Mistral API)\n\nCette classe gère la génération d'e..."
+    },
+    "embedder.py:ZvecEmbedder": {
+      "methods": [
+        "__init__",
+        "_load_model"
+      ],
+      "docstring": "Gestion des embeddings Zvec (384 dimensions via modèle local)\n\nCette classe gère la génération d'emb..."
+    },
+    "embedder.py:EmbedderManager": {
+      "methods": [
+        "__init__"
+      ],
+      "docstring": "Gestionnaire centralisé des embedders\n\nCette classe coordonne les embedders Qdrant et Zvec\npour faci..."
+    },
+    "fusion.py:SearchResult": {
+      "methods": [
+        "to_dict",
+        "from_dict",
+        "__hash__",
+        "__eq__"
+      ],
+      "docstring": "Résultat de recherche unifié\n\nReprésente un résultat après fusion des sources Qdrant,\nZvec et Memory..."
+    },
+    "fusion.py:FusionEngine": {
+      "methods": [
+        "__init__",
+        "_extract_id",
+        "_extract_content",
+        "_calculate_score",
+        "_rank",
+        "_deduplicate",
+        "get_fusion_stats",
+        "adjust_weights",
+        "get_top_k_by_source"
+      ],
+      "docstring": "Moteur de fusion des résultats de recherche\n\nLe FusionEngine combine les résultats de Qdrant et Zvec..."
+    },
+    "pipeline.py:RAGPipeline": {
+      "methods": [
+        "__init__",
+        "_load_config",
+        "_default_config",
+        "get_stats"
+      ],
+      "docstring": "Pipeline principal RAG\n\nOrchestre le flux complet d'indexation et de recherche:\n1. Chunking: Découpa..."
+    }
+  },
+  "functions": {},
+  "errors": [],
+  "warnings": [],
+  "stats": {
+    "total_files": 17,
+    "total_lines": 4904,
+    "total_classes": 25,
+    "total_functions": 132,
+    "errors_count": 0,
+    "warnings_count": 0
+  },
+  "config": {
+    "status": "OK",
+    "sections": [
+      "version",
+      "chunking",
+      "tagging",
+      "embedding",
+      "routing",
+      "fusion",
+      "memory_mcp"
+    ]
+  },
+  "dependencies": {
+    "standard": [
+      "collections",
+      "os",
+      "re",
+      "asyncio",
+      "typing",
+      "pathlib",
+      "uuid",
+      "sys",
+      "dataclasses",
+      "enum",
+      "datetime",
+      "json"
+    ],
+    "third_party": [
+      "transformers",
+      "torch"
+    ],
+    "local_count": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "feature": "jiminy_pipeline_enrichi",
+  "status": "initialization",
+  "current_step": "semantic_matching_ready",
+  "completed_steps": [
+    "périmètre_isolé",
+    "zvec_sync_via_native_pipeline",
+    "zvec_sync_via_native_pipeline",
+    "zvec_sync_via_native_pipeline",
+    "ingestion_prompts_enrichie"
+  ],
+  "last_update": "2026-04-11T04:26:40.361690",
+  "experts_indexed": 83
+}

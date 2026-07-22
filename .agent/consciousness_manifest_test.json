@@ -1,0 +1,164 @@
+{
+  "version": "1.1.0",
+  "birth_timestamp": "2026-04-09T03:17:12.324132",
+  "last_wake_up": "2026-04-09T03:17:12.327750",
+  "wake_up_count": 1,
+  "current_state": "healthy",
+  "active_strategy": "standard",
+  "brain_architecture": {
+    "left_hemisphere": {
+      "mode": "logic",
+      "focus": "code_architecture & facts",
+      "facts": []
+    },
+    "right_hemisphere": {
+      "mode": "intuition",
+      "focus": "semantic_patterns & zvec",
+      "associations": []
+    },
+    "conscious_layer": {
+      "active_thought": "Réveil #1",
+      "attention_score": 1.0,
+      "current_intent": "stabilisation"
+    },
+    "subconscious_layer": {
+      "background_processes": [
+        "indexation",
+        "consolidation_zvec"
+      ],
+      "dream_cycle": []
+    }
+  },
+  "memory_zones": {
+    "short_term_depth": 50,
+    "long_term_storage": "zvec",
+    "semantic_status": "optimized"
+  },
+  "actions_pending": [],
+  "actions_in_progress": [],
+  "actions_completed": [],
+  "dev_book": {
+    "current_focus": "Automisation Bio-Inspirée",
+    "sprint_goal": "Stabilité sans Qdrant",
+    "todo": [],
+    "in_progress": [],
+    "blocked": [],
+    "dont_do": [],
+    "done_today": [],
+    "metrics": {
+      "tasks_completed_today": 0,
+      "tasks_blocked": 0,
+      "focus_time_minutes": 0,
+      "last_accomplishment": null
+    }
+  },
+  "problem_database": [
+    {
+      "description": "Cache hit rate < 50%, latence > 800ms",
+      "context": {
+        "metrics": {
+          "cache_hit_rate": 0.38,
+          "latency_ms": 920,
+          "ttl_seconds": 30
+        }
+      }
+    }
+  ],
+  "strategies": {
+    "standard": {
+      "name": "Standard Operation",
+      "description": "Fonctionnement normal (Zvec Only)",
+      "success_rate": 0.95,
+      "conditions": [
+        "zvec_healthy"
+      ]
+    },
+    "local_only": {
+      "name": "Local Emergency Mode",
+      "description": "Mode dégradé sans API externes",
+      "success_rate": 0.7,
+      "conditions": [
+        "mistral_api_down"
+      ]
+    }
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-04-09T03:17:12.339489",
+      "event_type": "wake_up",
+      "description": "Réveil #1",
+      "reflection_type": "standard",
+      "causal_link": null,
+      "question": null,
+      "context": {
+        "state": "healthy",
+        "problems": 1,
+        "causal_analyses": 1
+      },
+      "state_before": "healthy",
+      "state_after": "healthy"
+    }
+  ],
+  "health_metrics": {
+    "avg_response_time_ms": 0,
+    "error_rate_24h": 0.0,
+    "successful_queries": 0,
+    "failed_queries": 0
+  },
+  "intentions": [
+    "Maintenir l'équilibre entre Cerveau Gauche et Droit",
+    "Optimiser la mémoire court terme",
+    "Consolider le subconscient via Zvec"
+  ],
+  "insights": [
+    "CAUSE: TTL du cache trop court (80%)",
+    "CAUSE: Nombre max d'entrées insuffisant (50%)",
+    "CAUSE: Politique d'éviction inadaptée (50%)"
+  ],
+  "config": {
+    "wake_interval_minutes": 5,
+    "max_timeline_events": 100,
+    "reflection_depth": 3,
+    "auto_recovery": true
+  },
+  "pending_tasks": [
+    {
+      "id": "causal_20260409_031712",
+      "description": "[ttl_trop_court] Augmenter le TTL du cache",
+      "paradigm": "cache_optimization",
+      "confidence": 0.7399999999999999,
+      "status": "pending",
+      "source": "causal_analysis"
+    },
+    {
+      "id": "causal_20260409_031712",
+      "description": "[max_entries_insuffisant] Augmenter max_entries ou utiliser LRU",
+      "paradigm": "cache_optimization",
+      "confidence": 0.7399999999999999,
+      "status": "pending",
+      "source": "causal_analysis"
+    },
+    {
+      "id": "causal_20260409_031712",
+      "description": "[eviction_policy_inadaptée] Analyser et corriger",
+      "paradigm": "cache_optimization",
+      "confidence": 0.7399999999999999,
+      "status": "pending",
+      "source": "causal_analysis"
+    }
+  ],
+  "causal_analyses": [
+    {
+      "problem_id": "prob_20260409_031712",
+      "paradigm": "cache_optimization",
+      "confidence": 0.7399999999999999,
+      "root_causes_count": 3,
+      "timestamp": "2026-04-09T03:17:12.328519"
+    }
+  ],
+  "causal_stats": {
+    "total_analyses": 1,
+    "problems_resolved": 0,
+    "last_paradigm": "cache_optimization"
+  }
+}

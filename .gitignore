@@ -98,6 +98,9 @@ Thumbs.db
 !.vscode/launch.json
 !.vscode/extensions.json
 .idea/
+.kilo/
+.kiro/
+.trae/
 *.suo
 *.user
 

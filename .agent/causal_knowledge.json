@@ -1,0 +1,9 @@
+{
+  "cause_frequency": {
+    "ttl_trop_court": 1,
+    "max_entries_insuffisant": 1,
+    "eviction_policy_inadaptée": 1
+  },
+  "paradigm_success_rate": {},
+  "last_updated": "2026-04-09T03:17:12.328912"
+}

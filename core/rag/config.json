@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "chunking": {
+    "default_size": 512,
+    "overlap_percent": 15,
+    "min_chunk_size": 100,
+    "max_chunk_size": 1500,
+    "types": {
+      "atomic": {"min": 50, "max": 100},
+      "modular": {"min": 200, "max": 500},
+      "contextual": {"min": 500, "max": 1000},
+      "structural": {"min": 100, "max": 2000}
+    }
+  },
+  "tagging": {
+    "auto_detect": true,
+    "min_confidence": 0.7,
+    "max_tags_per_chunk": 10,
+    "categories": {
+      "categorique": ["type", "domain", "scope", "priority"],
+      "semantique": ["concept", "action", "entity", "relation"],
+      "contextuel": ["temporal", "source", "confidence", "access"]
+    }
+  },
+  "embedding": {
+    "zvec": {
+      "enabled": true,
+      "url": "http://localhost:8001",
+      "dimensions": 384,
+      "provider": "local",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "collections": {
+        "personality_experts": "jiminy_personality_vector_base",
+        "concepts": "concepts_index",
+        "entities": "entities_index"
+      }
+    }
+  },
+  "routing": {
+    "strategy": "zvec_only",
+    "fallback": "none",
+    "min_score": 0.3,
+    "rules": {
+      "personality": {"zvec": true}
+    }
+  },
+  "fusion": {
+    "weights": {
+      "zvec": 1.0
+    },
+    "min_results": 3,
+    "max_results": 10,
+    "deduplication": true,
+    "neuronal_mode": true
+  }
+}

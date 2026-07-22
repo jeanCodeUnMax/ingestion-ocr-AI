@@ -1,0 +1,11 @@
+{
+  "cause_frequency": {
+    "requête_non_optimisée": 1,
+    "algorithme_sous_optimal": 1,
+    "index_manquant": 1
+  },
+  "paradigm_success_rate": {
+    "performance_tuning": 0.55
+  },
+  "last_updated": "2026-04-09T03:07:09.641498"
+}
