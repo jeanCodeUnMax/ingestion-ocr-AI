@@ -1,16 +1,103 @@
+# ==============================================================================
+# HEPHAISTOS SYSTEM - GITIGNORE
+# Projet : Ingestion OCR AI System
+# Stack : Node.js (TypeScript) + Python 3.11+ + Fastify + PyMuPDF + SQLite
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. ENVIRONNEMENT ET SECRETS (P0 Security)
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert
+*.pfx
+
+# ------------------------------------------------------------------------------
+# 2. DÉPENDANCES ET BUILDS NODE.JS / TS
+# ------------------------------------------------------------------------------
 node_modules/
 dist/
-.env
+build/
+out/
+.next/
+.turbo/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ------------------------------------------------------------------------------
+# 3. DÉPENDANCES ET CACHES PYTHON
+# ------------------------------------------------------------------------------
 .venv/
+venv/
+env/
+ENV/
 __pycache__/
-*.pyc
-workspaces/*
-!workspaces/.gitkeep
-runtime/jobs/*
-!runtime/jobs/.gitkeep
-runtime/uploads/*
-!runtime/uploads/.gitkeep
-runtime/vector/*
-!runtime/vector/.gitkeep
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.eggs/
+
+# ------------------------------------------------------------------------------
+# 4. BASES DE DONNÉES LOCALES ET DONNÉES RUNTIME
+# ------------------------------------------------------------------------------
+*.sqlite
+*.sqlite3
+*.db
 *.sqlite-wal
 *.sqlite-shm
+
+# Données d'exécution et projets (conserver .gitkeep)
+runtime/*
+!runtime/**/.gitkeep
+workspaces/*
+!workspaces/**/.gitkeep
+
+# ------------------------------------------------------------------------------
+# 5. LOGS ET ARTEFACTS TEMPORAIRES
+# ------------------------------------------------------------------------------
+*.log
+firebase-debug.log*
+logs/
+temp/
+tmp/
+*.tmp
+quarantaine/
+core/quarantine/
+
+# ------------------------------------------------------------------------------
+# 6. ÉTAT ET MÉMOIRE SYSTÈME HEPHAISTOS (.agent)
+# ------------------------------------------------------------------------------
+.agent/logs/
+.agent/consciousness_backups/
+.agent/backup/
+
+# ------------------------------------------------------------------------------
+# 7. FICHIERS SYSTÈME OPÉRATIF ET IDE
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Configuration IDE (conserver la structure basique si nécessaire, ignorer l'état local)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.user
+
