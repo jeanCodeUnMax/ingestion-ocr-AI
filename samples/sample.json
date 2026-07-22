@@ -1,0 +1,13 @@
+{
+  "site": "Atelier A",
+  "machines": [
+    {
+      "id": "P-101",
+      "etat": "normal"
+    },
+    {
+      "id": "M-204",
+      "etat": "alerte"
+    }
+  ]
+}

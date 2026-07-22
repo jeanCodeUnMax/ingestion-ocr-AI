@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+.venv/
+__pycache__/
+*.pyc
+workspaces/*
+!workspaces/.gitkeep
+runtime/jobs/*
+!runtime/jobs/.gitkeep
+runtime/uploads/*
+!runtime/uploads/.gitkeep
+runtime/vector/*
+!runtime/vector/.gitkeep
+*.sqlite-wal
+*.sqlite-shm
