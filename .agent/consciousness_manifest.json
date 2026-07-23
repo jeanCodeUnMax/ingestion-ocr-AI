@@ -701,6 +701,13 @@
   "dev_book": {
     "todo": [
       {
+        "id": "task_20260723_0411",
+        "task": "REPRISE SESSION: Vérifier que le pipeline OCR atteint 100% avec les mock providers (none/hash/rules) configurés dans .env. Puis tester que le Chat RAG remonte bien les fragments via SQLite.",
+        "priority": "high",
+        "created_at": "2026-07-23T04:11:00.000000",
+        "source": "manual"
+      },
+      {
         "id": "task_20260408_225810",
         "task": "MÉDITATION: Rédiger une réflexion sur le rôle du LLM comme 'Âme' du système ML.",
         "priority": "medium",

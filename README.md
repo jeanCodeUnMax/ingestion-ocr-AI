@@ -44,6 +44,12 @@ Embeddings SQLite
 Chat RAG sourcé, limité au projet
 ```
 
+## Architecture Cognitive (Agents IA)
+
+Le projet intègre des règles strictes pour les assistants IA (Hephaistos, Antigravity, Kilo, etc.) afin d'éviter l'amnésie entre les sessions :
+1. **Le "Brain" de l'IDE (Session)** : Les brouillons, plans de travail, et manifestes de session (comme `MANIFESTE_REPRISE_DEMAIN.md`) générés par l'IA de l'IDE (ex: Gemini/Antigravity) sont volatils et limités à la conversation en cours. Ils ne survivent pas à un redémarrage d'une nouvelle session.
+2. **Le "Manifeste de Conscience" (Global)** : L'état réel et permanent du projet pour les IAs est stocké dans `.agent/consciousness_manifest.json` et `docs/DEVBOOK-PROGRESS-v0.6.md`. L'IA **doit** y consigner toutes les prochaines étapes avant la fin d'une session. Plus de détails dans [le Wiki](docs/wiki/AGENT_COGNITIVE_ARCHITECTURE.md).
+
 ## Installation
 
 Prérequis : Node.js 22.5+, Python 3.11+.
